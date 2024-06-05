@@ -1,0 +1,61 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdk
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    namespace 'com.example.common_lib'
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdk
+        targetSdkVersion rootProject.ext.android.targetSdk
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+}
+
+dependencies {
+
+    api "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
+    api 'com.google.code.gson:gson:2.9.0'
+    api 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    api rootProject.ext.dependencies["baseRecyclerViewAdapterHelper"]
+    api rootProject.ext.dependencies["smartRefreshLayout"]
+    api rootProject.ext.dependencies["smartRefreshHeader"]
+
+    api rootProject.ext.dependencies["eventbus"]
+
+    api rootProject.ext.dependencies["glide"]
+    annotationProcessor rootProject.ext.dependencies["glide_processor"]
+
+    api   rootProject.ext.dependencies["appcompat"]
+    api   rootProject.ext.dependencies["material"]
+    api   rootProject.ext.dependencies["annotations"]
+    api   rootProject.ext.dependencies["junit"]
+    api   rootProject.ext.dependencies["ext-junit"]
+    api   rootProject.ext.dependencies["espresso-core"]
+    api   rootProject.ext.dependencies["constraintlayout"]
+
+    api rootProject.ext.dependencies["logger"]
+}

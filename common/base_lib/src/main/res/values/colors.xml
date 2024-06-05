@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="title_font_color">#292929</color>
+
+    <color name="actionbar_start_bg">#ff6567</color>
+    <color name="actionbar_end_bg">#fa5247</color>
+    <color name="black_33">#333333</color>
+
+    <color name="colorButton">#ff5b53</color>
+    <color name="colorPrimary">#5FCC6A</color>
+    <color name="common_white">#ffffff</color>
+    <color name="lineColor_click">#00000000</color>
+    <color name="lineColor_unclick">#00000000</color>
+    <color name="color_FFFFFFFF">#FFFFFF</color>
+    <color name="color_000000">#000000</color>
+    <color name="color_FFAB11">#FFAB11</color>
+    <color name="hui_state">#F9F9FA</color>
+    <color name="banner_126EF8">#126EF8</color>
+    <color name="banner_D8D8D8">#D8D8D8</color>
+    <color name="color_dadada">#DADADA</color>
+    <color name="common_999">#999999</color>
+    <color name="color_f8f8f8">#F8F8F8</color>
+    <color name="color_FCFCFC">#f3f3f3</color>
+    <color name="common_transparent">#00000000</color>
+    <color name="f0f0f0">#F0F0F0</color>
+
+    <color name="color_white">#FFFFFFFF</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_f74e00">#F74E00</color>
+    <color name="color_transparent2e">#2E000000</color>
+    <color name="color_3F3F3F">#3F3F3F</color>
+    <color name="color_EBEBEB">#EBEBEB</color>
+    <color name="color_5EC58E">#5EC58E</color>
+    <color name="color_5FCC6A">#5FCC6A</color>
+
+    <color name="default_placeholder_color">#F0F0F0</color>
+
+</resources>

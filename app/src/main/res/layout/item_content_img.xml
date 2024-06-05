@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.zhuzhenkui.notepad.home.entity.NoteContentEntity" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/conntent_img_et"
+            imageUrl="@{item.imageUrl}"
+            android:lines="1"
+            android:maxLines="1"
+            android:maxLength="1"
+            android:layout_width="300dp"
+            android:background="@null"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+</layout>

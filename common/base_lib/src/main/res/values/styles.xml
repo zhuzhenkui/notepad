@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SelectCarItemView">
+        <attr name="item_icon" format="reference|color" />
+        <attr name="item_editview_content" format="string" localization="suggested" />
+        <attr name="item_right_txt" format="string" localization="suggested" />
+    </declare-styleable>
+    <declare-styleable name="MineItemView">
+        <attr name="mine_item_icon" format="reference|color" />
+        <attr name="mine_item_text" format="string" localization="suggested" />
+    </declare-styleable>
+
+    <declare-styleable name="SetItemVIew">
+        <attr name="set_item_title" format="string" localization="suggested" />
+        <attr name="set_item_content" format="string" localization="suggested" />
+
+    </declare-styleable>
+    <style name="recycler_view_v3">
+        <item name="android:fadingEdge">none</item>
+        <item name="android:focusable">false</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:background">@color/color_FCFCFC</item>
+    </style>
+
+    <declare-styleable name="AddTitileContentView">
+    <attr name="add_title_title" format="string" localization="suggested" />
+    <attr name="add_title_hint" format="string" localization="suggested" />
+    </declare-styleable>
+
+    <!--    <attr name="wheelview_gravity">-->
+<!--        <enum name="center" value="17"/>-->
+<!--        <enum name="left" value="3"/>-->
+<!--        <enum name="right" value="5"/>-->
+<!--    </attr>-->
+</resources>

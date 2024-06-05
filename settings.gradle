@@ -1,0 +1,35 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven{ url 'https://maven.aliyun.com/repository/google'}
+        maven{ url 'https://maven.aliyun.com/repository/gradle-plugin'}
+        maven{ url 'https://maven.aliyun.com/repository/public'}
+        maven{ url 'https://maven.aliyun.com/repository/jcenter'}
+        maven { url "https://jitpack.io" }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven{ url 'https://maven.aliyun.com/repository/google'}
+        maven{ url 'https://maven.aliyun.com/repository/gradle-plugin'}
+        maven{ url 'https://maven.aliyun.com/repository/public'}
+        maven{ url 'https://maven.aliyun.com/repository/jcenter'}
+        maven { url "https://jitpack.io" }
+    }
+}
+
+rootProject.name = "notepad"
+include ':app'
+include ':base_lib'
+project(':base_lib').projectDir = new File(rootProject.projectDir, './common/base_lib')
+
+include ':common_lib'
+project(':common_lib').projectDir = new File(rootProject.projectDir, './common/common_lib')
+
+include ':ui_lib'
+project(':ui_lib').projectDir = new File(rootProject.projectDir, './common/ui_lib')

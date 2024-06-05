@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shengdan.ui_lib.title.CenterTitleToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/base_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:minHeight="50dp"
+    android:theme="@style/AppTheme_Bar"
+    android:titleTextColor="@color/ff292929"
+    app:titleTextAppearance="@android:style/TextAppearance.Medium">
+
+</com.shengdan.ui_lib.title.CenterTitleToolbar>

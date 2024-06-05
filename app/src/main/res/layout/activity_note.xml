@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.zhuzhenkui.notepad.home.vm.NotePadViewModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.activity.NoteActivity">
+        <LinearLayout
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:onClick="onAudioRecordClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="录音"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+            <Button
+                android:onClick="onPlayClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="play"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </LinearLayout>
+        <fragment
+            android:id="@+id/bbb"
+            android:name="com.zhuzhenkui.notepad.home.fragment.NotePadFragment"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:onClick="onStartCameraClick"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="拍照"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:onClick="onGalleryClick"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="相册"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/audio_read"
+                android:onClick="onAudioRecordClick"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text='@{vm.timeDownCountObs == -1? "录音":"结束("+vm.timeDownCountObs+")"}'
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

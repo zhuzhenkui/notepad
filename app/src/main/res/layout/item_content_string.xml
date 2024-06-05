@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.zhuzhenkui.notepad.home.entity.NoteContentEntity" />
+        <variable
+            name="position"
+            type="Integer"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/content_text_et"
+            position="@{position}"
+            android:gravity="top"
+            android:text="@{item.contentString}"
+            android:background="@null"
+            android:textColor="#333"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+</layout>
